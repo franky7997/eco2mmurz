@@ -122,7 +122,7 @@ app.post("/api/v1/getProduct", async (req, res) => {
     // console.log(tagP);
     // console.log(textArray);
     // console.log(uniqueShoes);
-    console.log("IsShoes: " + JSON.stringify(shoesResult));
+    // console.log("IsShoes: " + JSON.stringify(shoesResult));
     if (isEmptyObject(shoesResult)) {
       res.status(200).send({ error: "Shoes keyword not found" });
     } else {
@@ -144,7 +144,7 @@ app.post("/api/v1/getProduct", async (req, res) => {
     // console.log(findMaterialSizes(sortedShoes, result.material));
     // res.status(200).send(sortedShoes);
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send(error);
   }
 });
@@ -160,7 +160,7 @@ app.post("/api/v1/getProductHTML", async (req, res) => {
     const html = await getPageHTML(url);
     res.status(200).send(html);
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).send(error);
   }
 });
